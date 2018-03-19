@@ -1,0 +1,90 @@
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>2017 세종과학예술영재학교 인문자연탐사</title>
+
+    <!--jQuery & Bootstrap import-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--End jQuery & Bootstrap import-->
+
+    <!-- CSS Includes-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="static/css/style.css" rel="stylesheet">
+
+    <!--HTML5 support for IE8-->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--End HTML5 support for IE8-->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=AzYWA1fOfqQGSCnqI_Bk"></script>
+    <script src="static/js/main.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a class="navbar-brand" href="#">SASA 2017 인문자연탐사</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">
+                        <i class="fa fa-map"></i>&nbsp;계룡산 지도</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="worklist.html">
+                        <i class="fa fa-list"></i>&nbsp;연구 목록</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">
+                    <i class="fa fa-calendar"></i>&nbsp;연도 선택</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <div id="map" style="width:100%;height:100%;"></div>
+
+    </div>
+    <div class="modal fade" id="modal-loc">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- header -->
+                <div class="modal-header">
+                    <!-- header title -->
+                    <h4 class="modal-title" id="modal-loc-title">Header</h4>
+                    <!-- 닫기(x) 버튼 -->
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <!-- body -->
+                <div class="modal-body" id="modal-loc-wrapper">
+                    <div id="modal-loc-content">
+                    </div>
+                    <div id="modal-loc-desc"></div>
+                </div>
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    setupMap();        
+</script>
+
+</html>
